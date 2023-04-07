@@ -1,0 +1,198 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.client {
+    width: 100%;
+    max-width: 1550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #4b2df8, #690ed0cc);
+    padding: 100px 175px;
+}
+
+.client-left {
+    width: 45%;
+}
+
+.client-left h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+
+.client-left h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.client-crowsel {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.slider {
+    width: 95%;
+}
+
+.slider h5 {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+.ceo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ceo img {
+    width: 45px;
+    height: auto;
+    margin-right: 18px;
+}
+
+.names h4 {
+    font-size: 19px;
+    margin: 0px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.names span {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
+.mySwiper {
+    padding-bottom: 100px !important;
+}
+
+.swiper-pagination-horizontal {
+    left: 40px !important;
+}
+
+.swiper-pagination-bullet-active-main {
+    padding: 7px !important;
+    background-color: #fff !important;
+    cursor: pointer !important;
+}
+
+
+
+
+
+.client-right {
+    width: 45%;
+    position: relative;
+}
+
+.single-picture img {
+    z-index: 10;
+}
+
+.single-circle {
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    width: 550px;
+    height: 551px;
+    z-index: 10;
+}
+
+.single-picture {
+    margin-left: -50px;
+}
+
+.single-picture img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+@media(max-width:1300px) {
+    .client {
+        padding: 100px;
+    }
+}
+
+
+@media(max-width:1100px) {
+    .client {
+        flex-direction: column;
+        padding: 100px 20px;
+    }
+
+}
+
+@media(max-width:1000px) {
+
+    .client-left {
+        width: 100%;
+    }
+
+    .client-right {
+        margin-top: 70px;
+    }
+
+    .client-right {
+        width: 100%;
+    }
+
+    .single-circle {
+        width: 100%;
+        height: auto !important;
+        position: unset;
+    }
+
+    .single-circle img {
+        width: 100%;
+        height: auto;
+    }
+
+    .single-picture {
+        width: 50%;
+        position: unset;
+        display: none;
+    }
+}
+
+@media(max-width:700px) {
+
+    .client {
+        padding: 100px 20px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .client-left h1 {
+        font-size: 35px;
+    }
+
+}
+
+
+@media(max-width:500px) {
+    .client {
+        padding: 100px 10px;
+    }
+}

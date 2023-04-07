@@ -1,0 +1,276 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 175px;
+    transition: .8s;
+    background-color: #ffff;
+    z-index: 100;
+}
+
+header.active {
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 0px 15px 0px #dbdbdb;
+
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.aaaa {
+    width: 135px;
+    height: auto;
+}
+
+.aaaa .active {
+    display: none;
+}
+
+.bbbb {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: auto;
+}
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+.common {
+    margin: 0px 15px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 27px 0px;
+    position: relative;
+    transition: .3s;
+}
+
+.common i {
+    font-size: 13px;
+    margin-left: 3px;
+}
+
+
+.common:hover {
+    color: #4636ff;
+}
+
+
+.hard {
+    position: absolute;
+    top: 83px;
+    left: 0px;
+    width: 200px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 15px 2px #dbdbdb;
+    border-top: 5px solid #4636ff;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: -1;
+    background-color: #ffff;
+}
+
+.common:hover .hard {
+    top: 73px;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 10;
+}
+
+
+.ofen {
+    list-style: none;
+    margin: 15px 0px;
+    cursor: pointer;
+    transition: .3s;
+    color: #000000;
+    position: relative;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.ofen:hover {
+    color: #4636ff;
+}
+
+
+.ofen::after {
+    width: 0% !important;
+    height: 1px;
+    background-color: #4636ff;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: unset;
+    transition: .2s;
+    top: 100%;
+}
+
+.ofen.enter::after {
+    width: 100% !important;
+}
+
+.ofen.leave::after {
+    width: 0% !important;
+    left: unset !important;
+    right: 0 !important;
+}
+
+
+
+.header-right button {
+    padding: 0px 30px;
+    height: 44px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #4636ff;
+    border: 2px solid #4636ff;
+    transition: .3s;
+    margin-left: 30px;
+}
+
+.header-right button:hover {
+    border: 2px solid #4636ff;
+    background-color: #ffff;
+    color: #4636ff;
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    background-color: #00000084;
+    z-index: 100;
+    transition: .5s;
+}
+
+.fa-bars {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+
+
+
+
+@media(max-width: 1300px) {
+    header {
+        padding: 0px 100px;
+    }
+}
+
+
+@media(max-width: 1200px) {
+    header {
+        padding: 0px 50px;
+    }
+}
+
+
+
+@media(max-width: 1100px) {
+
+    header {
+        padding: 0px 20px;
+    }
+
+    .container {
+        width: 250px;
+        height: 100vh;
+        background-color: #1d1d1d;
+        padding: 30px 20px;
+        position: absolute;
+        top: 0px;
+        transition: .3s;
+        z-index: 10000;
+        overflow-y: auto;
+        overflow-x: clip;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    .common {
+        padding: 10px 0px;
+        margin: 0px;
+        width: 100%;
+        color: #ffff;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px solid #5f5f5f;
+    }
+
+    .hard {
+        width: 100%;
+        margin: 20px 0px;
+        box-shadow: none;
+        left: 0px;
+        top: 30px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+
+    .common:hover {
+        color: #ffff;
+    }
+
+    .common:hover .hard {
+        pointer-events: all;
+        top: 30px;
+        left: 0px;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+}
+
+
+@media(max-width:500px) {
+    header {
+        padding: 0px 10px;
+    }
+    .aaaa {
+        display: none !important;
+    }
+}
